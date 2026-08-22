@@ -1,0 +1,37 @@
+# Sanguine — gothic maximalism: darker greys, blood red, deep gold.
+# Tweak freely; re-apply with `omarchy theme set sanguine`.
+mode = "dark"
+
+# Blood red accent, deep gold selection tint
+accent = "#8c2f2f"
+selection = "#3a2b2b"
+muted = "#6e6a63"
+
+# Darker greys than Miasma
+background = "#1a1a1c"
+dark_background = "#131315"
+darker_background = "#0d0d0f"
+lighter_background = "#242427"
+
+# Warm parchment foreground
+foreground = "#c9c3b8"
+dark_foreground = "#55524d"
+light_foreground = "#8a857c"
+bright_foreground = "#d8d2c6"
+
+# Crimson / oxblood
+red = "#9b3535"
+yellow = "#a8873c"      # deep antique gold
+orange = "#8f5527"
+green = "#5c6b52"       # desaturated graveyard moss (kept subtle)
+cyan = "#b3924a"        # gold leaf
+blue = "#6e5a80"        # muted twilight violet
+magenta = "#a34258"     # wine
+brown = "#43291f"       # dried blood
+
+bright_red = "#b04343"
+bright_yellow = "#c29f4e"
+bright_green = "#6f8063"
+bright_cyan = "#c7a65c"
+bright_blue = "#84709a"
+bright_magenta = "#bb5468"
