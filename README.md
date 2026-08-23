@@ -5,7 +5,7 @@ A dark, blood-and-gold Omarchy theme. Sanguine takes the [Miasma](https://omarch
 ## Install
 
 ```bash
-omarchy theme install https://github.com/YOUR_USERNAME/omarchy-sanguine-theme.git
+omarchy theme install https://github.com/KRamPro/omarchy-sanguine-theme.git
 ```
 
 That's it. The theme applies immediately.
