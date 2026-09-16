@@ -10,11 +10,12 @@ omarchy theme install https://github.com/KRamPro/omarchy-sanguine-theme.git
 
 That's it. The theme applies immediately.
 
-### The fastfetch hook (one extra step)
+### The companion hook (one extra step)
 
-Sanguine ships a `theme-set.d` hook that gives your fastfetch a custom ASCII logo and tighter padding — but Omarchy themes can't install hooks automatically. After installing the theme, restore it with:
+Sanguine ships a `theme-set.d` hook that gives Fastfetch a custom ASCII logo and safely coordinates the optional Sanguine Workspaces plugin. Omarchy themes cannot install hooks automatically. To enable the companion behavior:
 
 ```bash
+omarchy plugin add https://github.com/KRamPro/omarchy-sanguine-workspaces.git
 mkdir -p ~/.config/omarchy/hooks/theme-set.d
 cp ~/.config/omarchy/themes/sanguine/hooks/fastfetch-theme-logo.sh \
    ~/.config/omarchy/hooks/theme-set.d/
@@ -22,18 +23,20 @@ chmod +x ~/.config/omarchy/hooks/theme-set.d/fastfetch-theme-logo.sh
 omarchy theme set sanguine
 ```
 
-The hook only activates the custom look while Sanguine is your active theme — switch themes and fastfetch reverts to stock Omarchy branding automatically.
+The hook activates the custom look only while Sanguine is active. It snapshots the complete bar layout, the two workspace plugin states, and the pre-Sanguine inactive-window opacity; switching away restores those exact values.
 
-## The fastfetch integration, explained
+## The companion integration, explained
 
 Every time a theme is set, the hook:
 
 1. **Resets fastfetch to pristine Omarchy defaults** by copying `/etc/fastfetch/config.jsonc` into `~/.config/fastfetch/`. Nothing custom ever accumulates.
 2. **If the theme is `sanguine`**, swaps the logo `source` to `logo-ascii.txt` (the skull, in this repo) and tightens padding to `left: 1, right: 1` to reclaim columns for the wider art.
+3. **If Sanguine Workspaces is installed**, replaces only the stock workspace widget with the companion and sets inactive-window opacity to 98%.
+4. **When leaving Sanguine**, restores the complete pre-Sanguine bar layout, both plugin enable states, and the prior inactive-window opacity.
 
 ### Undo it
 
-Remove the hook and let fastfetch fall back to defaults:
+Switch to another theme first so the hook can restore the saved workspace layout and opacity, then remove it:
 
 ```bash
 rm ~/.config/omarchy/hooks/theme-set.d/fastfetch-theme-logo.sh
