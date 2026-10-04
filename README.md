@@ -54,12 +54,20 @@ rm ~/.config/fastfetch/config.jsonc
 The palette in `colors.toml` is built around three ideas:
 
 - **Blood red** (`#8c2f2f` accent, `#9b3535` red) — the signature. Oxblood rather than fire-engine: dark enough to sit on near-black without vibrating.
-- **Deep antique gold** (`#a8873c` yellow, `#b3924a` cyan-as-gold-leaf) — the counterweight. Gold does the highlighting work that most themes give to blue or green.
+- **Deep antique gold** (`#a8873c` yellow, `#b3924a` gold leaf) — the counterweight. Gold deliberately occupies the semantic green and cyan slots, so success states, additions, and strings remain within Sanguine's visual language.
 - **Darker greys than Miasma** (`#1a1a1c` background down to `#0d0d0f`) — the stage. Warm parchment foreground (`#c9c3b8`) instead of pure white so text reads like ink on aged paper rather than a terminal.
 
-The supporting cast stays deliberately subdued: graveyard-moss green and twilight violet are desaturated so red and gold always own the screen. Wine (`#a34258`) and dried blood (`#43291f`) round out the reds for syntax variety.
+There is no general green or blue family in the palette. Burnished copper and gold leaf fill the warm highlight roles; oxblood (`#7a3032`), readable crimson (`#a23b3c`), and dried blood (`#43291f`) provide syntax separation without departing from red and gold. Diffs are the deliberate exception: Sanguine does not set Hermes's four diff-color keys at all, leaving additions and removals exactly as Hermes defines them by default.
 
 Tweak freely in `colors.toml`, then re-apply with `omarchy theme set sanguine`.
+
+## Wallpapers
+
+Sanguine's wallpaper rotation includes *Sanguine Reliquary*, *Weathered Seated
+Figure*, and *Veiled Devotional Figure*. The latter two use a single distorted
+devotional subject, match the existing pair's soot-and-umber tonal range, and
+deliberately avoid saturated accents. All preserve generous dark negative space
+for desktop legibility.
 
 ## Having trouble?
 

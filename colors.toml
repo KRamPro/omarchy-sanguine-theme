@@ -4,7 +4,7 @@ mode = "dark"
 
 # Blood red accent, deep gold selection tint
 accent = "#8c2f2f"
-selection = "#3a2b2b"
+selection = "#402426"
 muted = "#6e6a63"
 
 # Darker greys than Miasma
@@ -19,19 +19,21 @@ dark_foreground = "#55524d"
 light_foreground = "#8a857c"
 bright_foreground = "#d8d2c6"
 
-# Crimson / oxblood
+# Crimson and antique gold. ANSI slots that conventionally carry green or blue
+# are deliberately remapped into this two-family palette so applications cannot
+# reintroduce Miasma's moss or twilight hues through semantic colors.
 red = "#9b3535"
 yellow = "#a8873c"      # deep antique gold
-orange = "#8f5527"
-green = "#5c6b52"       # desaturated graveyard moss (kept subtle)
+orange = "#8f5527"      # burnished copper
+green = "#b3924a"       # semantic success rendered as gold leaf
 cyan = "#b3924a"        # gold leaf
-blue = "#6e5a80"        # muted twilight violet
-magenta = "#a34258"     # wine
+blue = "#7a3032"        # oxblood
+magenta = "#a23b3c"     # readable crimson
 brown = "#43291f"       # dried blood
 
 bright_red = "#b04343"
 bright_yellow = "#c29f4e"
-bright_green = "#6f8063"
+bright_green = "#c7a65c"
 bright_cyan = "#c7a65c"
-bright_blue = "#84709a"
-bright_magenta = "#bb5468"
+bright_blue = "#9c5c58"
+bright_magenta = "#c4524d"
